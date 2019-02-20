@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/snwfdhmp/stupidhttp/cmd"
+import "github.com/snwfdhmp/simplehttp/cmd"
 
 func main() {
 	cmd.Execute()

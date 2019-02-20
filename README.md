@@ -5,22 +5,22 @@
 Install with
 
 ```
-go get github.com/snwfdhmp/stupidhttp
+go get github.com/snwfdhmp/simplehttp
 ```
 
 ## Usage
 
-With no arguments, stupidhttp starts serving files under ./ over port 8080.
+With no arguments, simplehttp starts serving files under ./ over port 8080.
 
 ```
-$ stupidhttp
+$ simplehttp
 INFO[0000] Serving ./ over 0.0.0.0:8080... Stop with ^C 
 ```
 
 With `-d` arg, specify the directory to be served.
 
 ```
-$ stupidhttp -d ./templates/
+$ simplehttp -d ./templates/
 INFO[0000] Serving ./templates/ over 0.0.0.0:8080... Stop with ^C 
 ```
 
@@ -28,7 +28,7 @@ INFO[0000] Serving ./templates/ over 0.0.0.0:8080... Stop with ^C
 With `-p` arg, specify the port to serve on.
 
 ```
-$ stupidhttp -p 31415
+$ simplehttp -p 31415
 INFO[0000] Serving ./ over 0.0.0.0:31415... Stop with ^C 
 ```
 
