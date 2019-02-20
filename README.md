@@ -1,4 +1,4 @@
-# The most simple http server for quick&easy file serving
+# Quickly serve a local filesystem directory over http
 
 ## Getting started
 
