@@ -1,4 +1,4 @@
-# Quickly serve a local filesystem directory over http
+# Quickly serve a local directory over http
 
 ## Getting started
 
