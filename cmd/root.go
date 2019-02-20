@@ -36,8 +36,8 @@ var urlPrefix string
 // RootCmd represents the base command when called without any subcommands
 var RootCmd = &cobra.Command{
 	Use:   "stupidhttp",
-	Short: "Quickly serve local filesystem files over http",
-	Long: `Quickly serve local filesystem files over http
+	Short: "Quickly serve a local filesystem directory over http",
+	Long: `Quickly serve a local filesystem directory over http
 
 With no arguments, stupidhttp starts serving files under ./ over port 8080.
 With '-d' arg, specify the directory to be served.
