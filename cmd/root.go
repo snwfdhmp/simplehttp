@@ -27,7 +27,7 @@ import (
 
 var cfgFile string
 
-var serverRoot string
+var dirToServe string
 var serverPort string
 var urlPrefix string
 
@@ -46,11 +46,11 @@ With '-p' arg, specify the port to serve on.
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
-		fs := http.FileServer(http.Dir(serverRoot))
+		fs := http.FileServer(http.Dir(dirToServe))
 
 		http.Handle(urlPrefix, http.StripPrefix(urlPrefix, fs))
 
-		log.Infof("Serving %s over 0.0.0.0:%s... Stop with ^C", serverRoot, serverPort)
+		log.Infof("Serving %s over 0.0.0.0:%s... Stop with ^C", dirToServe, serverPort)
 		http.ListenAndServe(":"+serverPort, nil)
 	},
 }
@@ -76,7 +76,7 @@ func init() {
 	// when this action is called directly.
 	RootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
-	RootCmd.Flags().StringVarP(&serverRoot, "dir", "d", "./", "root directory to be served (ex: /var/www) [default is ./]")
+	RootCmd.Flags().StringVarP(&dirToServe, "dir", "d", "./", "root directory to be served (ex: /var/www) [default is ./]")
 	// RootCmd.Flags().BoolVarP(&enableLogging, "log", "l", true, "prints usage logs to the standard output")
 	RootCmd.Flags().StringVar(&serverPort, "port", "8080", "port to listen to [default is 8080)")
 	RootCmd.Flags().StringVar(&urlPrefix, "prefix", "/", "prefix required (ex: /static), suffix to host:port [default is /]")
