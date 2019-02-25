@@ -4,7 +4,7 @@
 
 Install with
 
-```
+```shell
 go get github.com/snwfdhmp/simplehttp
 ```
 
@@ -12,22 +12,21 @@ go get github.com/snwfdhmp/simplehttp
 
 With no arguments, simplehttp starts serving files under ./ over port 8080.
 
-```
+```shell
 $ simplehttp
-INFO[0000] Serving ./ over 0.0.0.0:8080... Stop with ^C 
+INFO[0000] Serving ./ over 0.0.0.0:8080... Stop with ^C
 ```
 
 With `-d` arg, specify the directory to be served.
 
-```
+```shell
 $ simplehttp -d ./templates/
 INFO[0000] Serving ./templates/ over 0.0.0.0:8080... Stop with ^C 
 ```
 
-
 With `-p` arg, specify the port to serve on.
 
-```
+```shell
 $ simplehttp -p 31415
 INFO[0000] Serving ./ over 0.0.0.0:31415... Stop with ^C 
 ```
