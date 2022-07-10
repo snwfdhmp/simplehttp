@@ -5,7 +5,7 @@
 Install with
 
 ```shell
-go install github.com/snwfdhmp/simplehttp@latest
+go install github.com/niksingh710/simplehttp@latest
 ```
 
 ## Usage
